@@ -20,6 +20,6 @@ group :development do
   gem 'binding_of_caller'
 end
 
-gem 'beyond'
+gem 'beyond', '~> 0.0.4'
 gem 'haml-rails'
 gem "twitter-bootstrap-rails"

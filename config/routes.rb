@@ -3,4 +3,5 @@ Videira::Application.routes.draw do
   mount Beyond::Engine, at: '/'
   get "home/index"
   get "home/about"
+  get 'home/sites'
 end
