@@ -54,9 +54,10 @@
 }
 
 .navbar-mine {
-  margin-left: 20%;
-  margin-right: 20%;
-  border: 3px solid rgb(206, 206, 206);
+  /*margin-left: 20%;
+  margin-right: 20%;*/
+  border-bottom: 3px solid rgb(206, 206, 206);
+  outline-offset: 0px;
 }
 
 .navbar-mine ul li {
@@ -64,6 +65,34 @@
 }
 
 .content {
-  margin: 30px;
+  overflow: auto;
+}
+
+.boxie {
+  border: 3px solid rgb(206, 206, 206);
   padding: 10px;
+  margin-left: 0px;
+}
+
+.boxie h1 {
+  color: rgb(103, 140, 57);
+}
+
+#carousel-home {
+  /*border: 3px solid rgb(206, 206, 206);
+  /*margin-left: 10%;
+  margin-right: 10%;*/
+}
+
+#carousel-home .carousel-caption {
+  background-color: rgba(206, 206, 206, 0.8);
+}
+
+#carousel-home h4 {
+  color: rgb(103, 140, 57);
+}
+
+footer {
+  border-top: 3px solid rgb(206, 206, 206);
+  padding: 12px;
 }

@@ -20,36 +20,35 @@
 
   %body
     /.div-with-cirle
-    .circle.centering
-      V
-    .titlebar.vine-green
-      =link_to 'Videira', root_url
-    .navbar.navbar-fluid-top.navbar-mine
-      .navbar-inner
+
+    .row-fluid
+      .span2
+      .span8
+        .circle.centering
+          V
+        .titlebar.vine-green
+          =link_to 'Videira', root_url
+        .navbar.navbar-fluid-top.navbar-mine
+          .container-fluid
+            %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            .container.nav-collapse
+              %ul.nav
+                %li= link_to "Home", main_app.root_url
+                %li= link_to "About", main_app.home_about_path
+                - if user_signed_in?
+                  %li= link_to 'Logout', beyond.destroy_user_session_path
+                - else
+                  %li= link_to 'Authorize', beyond.new_user_session_path
+                %li= link_to "llama", "/"
+                %li= link_to "A", "/"
         .container-fluid
-          %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          .container.nav-collapse
-            %ul.nav
-              %li= link_to "Home", main_app.root_url
-              %li= link_to "About", main_app.home_about_path
-              - if user_signed_in?
-                %li= link_to 'Logout', beyond.destroy_user_session_path
-              - else
-                %li= link_to 'Authorize', beyond.new_user_session_path
-              %li= link_to "llama", "/"
-              %li= link_to "A", "/"
-    .container-fluid
+        = bootstrap_flash
+        .content
+          = yield
+        %footer{style: 'margin-top: 42px;'}
+          %p &copy; Footer
+      .span2
 
-      .row-fluid
-        .span2
-        .span8
-          = bootstrap_flash
-          .content
-            = yield
-        .span2
-
-      %footer
-        %p &copy; Footer
