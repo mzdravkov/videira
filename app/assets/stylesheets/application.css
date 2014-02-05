@@ -11,3 +11,59 @@
  *= require_self
  *= require_tree .
  */
+
+/*
+ *= require bootstrap_and_overrides
+ */
+
+.titlebar {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.titlebar a {
+  color: rgb(103, 140, 57);
+}
+
+.titlebar a:hover {
+  color: rgb(103, 140, 57);
+  text-decoration: none;
+}
+
+.centering{
+  float: none;
+  margin: 0 auto;
+}
+
+.vine-green {
+  color: rgb(103, 140, 57);
+}
+
+.circle {
+    border-radius: 50%/50%;
+    width: 72px;
+    height: 72px;
+    background-color: rgb(103, 140, 57);
+    line-height: 72px;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    margin-top: 30px;
+}
+
+.navbar-mine {
+  margin-left: 20%;
+  margin-right: 20%;
+  border: 3px solid rgb(206, 206, 206);
+}
+
+.navbar-mine ul li {
+  margin-left: 30px;
+}
+
+.content {
+  margin: 30px;
+  padding: 10px;
+}
