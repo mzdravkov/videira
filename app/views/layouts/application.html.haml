@@ -39,7 +39,7 @@
                 %li= link_to "Home", main_app.root_url
                 %li= link_to "About", main_app.home_about_path
                 - if user_signed_in?
-                  %li= link_to 'Logout', beyond.destroy_user_session_path
+                  %li= link_to 'Logout', beyond.destroy_user_session_path, method: :delete
                 - else
                   %li= link_to 'Authorize', beyond.new_user_session_path
                 %li= link_to "Sites", main_app.home_sites_path

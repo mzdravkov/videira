@@ -80,6 +80,18 @@
   text-align: center;
 }
 
+.greenify {
+  color: rgb(103, 140, 57);
+}
+
+.tenant-well .working {
+  color: rgb(103, 140, 57);
+}
+
+.tenant-well .stopped {
+  color: #800000;
+}
+
 #carousel-home .carousel-caption {
   background-color: rgba(206, 206, 206, 0.8);
 }

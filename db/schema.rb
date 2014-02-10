@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140204211919) do
+ActiveRecord::Schema.define(version: 20140205145304) do
 
   create_table "beyond_plugins", force: true do |t|
     t.string   "name"
@@ -19,12 +19,12 @@ ActiveRecord::Schema.define(version: 20140204211919) do
     t.boolean  "public"
     t.integer  "tenant_id"
     t.boolean  "activated"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "archive_file_name"
     t.string   "archive_content_type"
     t.integer  "archive_file_size"
     t.datetime "archive_updated_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "beyond_tenants", force: true do |t|

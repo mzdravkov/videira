@@ -1,0 +1,39 @@
+%h2.greenify Your websites
+%hr
+- @tenants.each_slice(2) do |a, b|
+  .row-fluid
+    .span6
+      .well.tenant-well
+        = link_to "<h3>#{a.name}</h3>".html_safe, beyond.tenant_path(a)
+        %hr
+        - if a.working?
+          .working
+            Working
+        - else
+          .stopped
+            Stopped
+    - unless b.nil?
+      .span6
+        .well.tenant-well
+          = link_to "<h3>#{b.name}</h3>".html_safe, beyond.tenant_path(b)
+          %hr
+          - if b.working?
+            .working
+              Working
+          - else
+            .stopped
+              Stopped
+    - if a == @tenants.last
+      .span6
+        .well
+          = link_to "<h3>Create new</h3>".html_safe, beyond.new_tenant_path
+          %hr
+          Don't hesitate, it's fast and easy!
+    - if b == @tenants.last
+      .row-fluid
+        .span6
+          .well
+            = link_to "<h3>Create new</h3>".html_safe, beyond.new_tenant_path
+            %hr
+            Don't hesitate, it's fast and easy!
+%hr
