@@ -1,0 +1,19 @@
+.tenant-show
+  %h1= @tenant.name
+  %hr
+  .jumbotron
+    Status:
+    = @tenant.working? ? 'Working' : 'Stopped'
+    - if @tenant.working?
+      = button_to 'Stop tenant', action: :stop, class: 'btn btn-primary'
+    - else
+      = button_to 'Start tenant', action: :start, class: 'btn btn-primary'
+  = link_to 'Change configurations', edit_tenant_path(@tenant)
+
+  %h3 Plugins
+  - @tenant.plugins.each do |p|
+    = p.name
+    - if p.activated
+      = button_to 'Stop plugin', plugin_stop_path(p)
+    - else
+      = button_to 'Start plugin', plugin_start_path(p)

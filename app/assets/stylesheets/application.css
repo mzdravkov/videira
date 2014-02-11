@@ -57,16 +57,20 @@
   /*margin-left: 20%;
   margin-right: 20%;*/
   border-bottom: 3px solid rgb(206, 206, 206);
-  outline-offset: 0px;
+  /*outline-offset: 0px;*/
+}
+
+.navbar-mine {
+  padding-left: 25%;
 }
 
 .navbar-mine ul li {
   margin-left: 30px;
 }
 
-.content {
+/*.content {
   overflow: auto;
-}
+}*/
 
 .boxie {
   border-bottom: 3px solid rgb(206, 206, 206);
@@ -92,6 +96,10 @@
   color: #800000;
 }
 
+.tenant-show h1 {
+  color: rgb(103, 140, 57);
+}
+
 #carousel-home .carousel-caption {
   background-color: rgba(206, 206, 206, 0.8);
 }
@@ -102,5 +110,6 @@
 
 footer {
   border-top: 3px solid rgb(206, 206, 206);
+  margin-top: 42px;
   padding: 12px;
 }
