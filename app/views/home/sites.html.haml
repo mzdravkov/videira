@@ -1,5 +1,12 @@
 %h2.greenify Your websites
 %hr
+- if @tenants.empty?
+  .row-fluid
+    .span6
+      .well
+        = link_to "<h3>Create new</h3>".html_safe, beyond.new_tenant_path
+        %hr
+        Don't hesitate, it's fast and easy!
 - @tenants.each_slice(2) do |a, b|
   .row-fluid
     .span6
