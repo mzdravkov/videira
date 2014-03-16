@@ -20,7 +20,7 @@ group :development do
   gem 'binding_of_caller'
 end
 
-gem 'beyond', '~> 0.0.6'
+gem 'beyond', '~> 0.0.8'
 gem 'haml-rails'
 gem "twitter-bootstrap-rails"
 gem 'paperclip' # migrations can't run without it :S
