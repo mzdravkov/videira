@@ -6,7 +6,7 @@ class Test < Plugman::PluginBase
     plugin = """
       if User.table_exists?
         unless User.find_by_email('#{tenant.user.email}')
-          User.create({email: '#{tenant.user.email}', encrypted_password: '#{tenant.user.encrypted_password}'})
+          User.create({email: '#{tenant.user.email}', password: '#{tenant.user.encrypted_password}'})
         end
       end
     """
